@@ -1,0 +1,17 @@
+resolver: lts-8.16
+compiler: ghc-8.0.2
+
+nix:
+  enable: true
+  pure: true
+  packages:
+  - zlib
+  # shell-file: shell.nix
+
+packages:
+- ./
+- ../speech/spiros
+
+extra-deps: 
+- spiros-0.0.0
+
