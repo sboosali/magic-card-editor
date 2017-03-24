@@ -54,6 +54,7 @@ library
  exposed-modules:
                  Magic
                  Magic.Types
+                 Magic.Core
 -- other-modules:
                  Magic.Extra
                  Magic.Example
@@ -66,6 +67,11 @@ library
              , deepseq
              , hashable
              , semigroups
+
+             , diagrams
+             , diagrams-lib
+             , diagrams-svg 
+             , JuicyPixels
 
 --              , transformers
 --              , mtl
