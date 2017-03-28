@@ -71,6 +71,7 @@ library
              , diagrams
              , diagrams-lib
              , diagrams-svg 
+             , diagrams-contrib
              , JuicyPixels
 
 --              , transformers
@@ -101,6 +102,19 @@ library
 
 
 executable example-magic-card-editor
+ hs-source-dirs:      executables
+ main-is:             Main.hs
+
+ default-language:    Haskell2010
+ ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+
+ build-depends:
+    base
+  , magic-card-editor
+
+
+-- for emacs
+executable example
  hs-source-dirs:      executables
  main-is:             Main.hs
 

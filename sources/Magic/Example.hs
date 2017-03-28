@@ -17,13 +17,12 @@ stack build && stack exec -- example-magic-card-editor -o circle.svg -w 250
 -}
 main :: IO ()
 main = do
---  arguments <- getArgs >>= \case
---   [s] -> return (s)
---   _ -> return ("")
+ getArgs >>= \case
+  [] -> withArgs ["-o", "card.svg", "-w", "250"] main' -- TODO lol
+  _ -> main'
 --  main' arguments
 
--- main' s = do
---  putStrLn s
+main' = do
  putStrLn "(Magic.Example...)"
  mainWith cardDiagram
 
